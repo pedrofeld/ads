@@ -196,16 +196,4 @@ Redes organizacionais:
 - Rede Privada Virtual (VPN): Proporciona acesso remoto seguro à rede interna de uma organização, permitindo que usuários externos contornem firewalls de forma protegida.
 
 Recursos na Nuvem
-- Computação em Nuvem: Permite que empresas e indivíduos utilizem serviços de armazenamento e aplicativos pela internet, eliminando a necessidade de instalação local de software.
-- Vantagens da Computação em Nuvem:
-    - Acesso de qualquer dispositivo com internet.
-    - Escalabilidade para muitos usuários.
-    - Redução de necessidade de hardware local e atualizações.
-- Desvantagens da Computação em Nuvem:
-    - Dependência de acesso à internet.
-    - Preocupações com a segurança dos dados armazenados em servidores de terceiros.
-    - Falta de controle sobre dados e serviços.
-- Nuvem Privada: Oferece um espaço de servidor dedicado a uma organização, combinando o controle total sobre os dados com os benefícios da computação em nuvem.
-- Virtualização: Tecnologia que permite simular múltiplos dispositivos em um único servidor, ajudando a reduzir a necessidade de hardware e melhorar a eficiência.
-
 ![Relação de vantagens e desvantagens da computação em núvem](./assets/images/Computação%20em%20nuvem.png)
