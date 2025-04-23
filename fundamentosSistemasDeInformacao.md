@@ -193,6 +193,8 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 **Objetivo:** Unificar pessoas, processos e tecnologia, otimizando operações à medida que a empresa cresce.
 
+![Estrutura típica de funcionamento de um sistema ERP](./assets/images/ERP.png)
+
 ## 2. SCM (Supply Chain Management)
 **Definição:** Gerencia a cadeia de suprimentos, desde a aquisição de matérias-primas até a entrega dos produtos finais.
 
@@ -201,6 +203,8 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 - Acessível a todas as partes interessadas na cadeia de suprimentos.
 
 **Objetivo:** Melhorar a supervisão dos processos, agilizar entregas e reduzir custos, adaptando-se às demandas dos clientes.
+
+![Representação do processo de SCM](./assets/images/Processo%20de%20SCM.png)
 
 ## 3. CRM (Customer Relationship Management)
 **Definição:** Sistema para gerenciar interações e dados dos clientes, visando fortalecer relacionamentos.
@@ -219,7 +223,7 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 # Gestão de Documentos e Big Data
 
-## 1. Gestão de Documentos
+## Gestão de Documentos
 **Conceito:** Os sistemas de gerenciamento de documentos funcionam como "armários eletrônicos" para organizar documentos digitais e em papel, permitindo a captura, armazenamento, gerenciamento, distribuição e preservação das informações.
 
 ### Etapas do Processo
@@ -245,7 +249,52 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 - **Histórico de Edição:** Rastreamento de alterações em documentos.
 - **Acesso Móvel:** Capacidade de acessar documentos via dispositivos móveis.
 
-## 2. Big Data
+# Business Intelligence (BI)
+
+**Definição:** O sistema de inteligência de negócios é um conjunto de soluções que utiliza tecnologias, processos e aplicações para extrair, armazenar, analisar e gerenciar dados de diferentes sistemas de negócios.
+
+**Objetivo:** Converter dados brutos em informações significativas que impulsionam ações comerciais lucrativas, auxiliando na tomada de decisões.
+
+### Componentes Principais do BI
+1. **Coleta de Dados**: Captura de dados de várias fontes, incluindo dados estruturados e não estruturados.
+2. **Organização e Apresentação**: Estruturação dos dados de forma que sejam facilmente analisáveis.
+3. **Entrega de Dados**: Fornecimento de informações na hora certa, para a pessoa certa e no formato certo.
+
+### Elementos do Ambiente de BI
+- **Dados do Ambiente Empresarial**: Integração de dados de múltiplas fontes, incluindo Big Data.
+- **Infraestrutura de Inteligência Empresarial**: Sistemas de banco de dados que armazenam dados relevantes.
+- **Conjunto de Ferramentas de Análise**: Software para gerar relatórios e acompanhar o desempenho.
+- **Usuários e Métodos Gerenciais**: Gestão que define metas estratégicas e mensura progresso.
+- **Plataformas de Entrega**: Sistemas de informação gerencial (SIG), sistemas de apoio à decisão (SAD) e sistemas de apoio à execução (SAE).
+- **Interface com o Usuário**: Ferramentas de visualização de dados que facilitam a análise em dispositivos móveis e desktops.
+
+**Impacto:** O BI permite decisões informadas baseadas em dados históricos, melhorando a eficácia das estratégias de negócios.
+
+![Ambiente de inteligência empresarial](./assets/images/Ambiente%20de%20inteligência%20empresarial.png)
+
+---
+
+# Mídias Sociais Integradas aos Sistemas
+
+**Definição:** As empresas estão enfrentando um grande influxo de dados de mídias sociais, que podem ser usados para insights valiosos.
+
+### Inteligência Social
+- **Coleta de Dados**: Informações demográficas e de engajamento de usuários nas mídias sociais.
+- **Análise de Tendências**: Interpretação de dados para prever comportamentos e ajustar estratégias de marketing.
+
+### Principais Métricas de Mídias Sociais
+- Número de seguidores e curtidas.
+- Taxa de resposta e engajamento.
+- Demografia e localização dos usuários.
+- Alcance e interações com postagens.
+
+### Desafios
+- **Armazenamento**: Necessidade de soluções que economizem espaço e custos.
+- **Acessibilidade**: Importância de coletar dados de forma eficiente, evitando a sobrecarga de informações.
+
+**Conclusão:** A integração de dados de mídias sociais com ferramentas de BI é essencial para entender melhor o comportamento do consumidor e otimizar estratégias de negócios.
+
+## Big Data
 **Definição:** Big Data refere-se a conjuntos de dados extremamente grandes e complexos que não podem ser gerenciados por ferramentas tradicionais. Caracteriza-se por:
 - **Volume:** Grande quantidade de dados gerados.
 - **Variedade:** Diversidade de tipos de dados (estruturados e não estruturados).
