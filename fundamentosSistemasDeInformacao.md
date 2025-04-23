@@ -316,3 +316,146 @@ As empresas utilizam Big Data para:
 - **Armazenamento:** Necessidade de infraestrutura robusta.
 - **Segurança:** Risco de acesso não autorizado aos dados.
 - **Escalabilidade:** Capacidade de se adaptar a crescimentos futuros.
+
+---
+
+# Negócios Eletrônicos (e-business)
+
+- ".... é a denominação aos negócios efetuados por meios eletrônicos, geralmente na internet", segundo Gutierrez.
+- E-commerce é a compra e venda de bens e serviços, e a transferência de fundos, por meio de comunicações digitais, é a base do e-business.
+- Enquanto o e-commerce se concentra na transação entre comprador e vendedor, o e-business se concentra na integração da transação de venda eletrônica com o restante das funções da organização. Foca principalmente no método de utilização de informações digitais e tecnologias avançadas de comunicação para agilizar diferentes processos de negócios. Além disso, compreende todo o conjunto de sistemas que operam juntos para que o comércio eletrônico aconteça. Também envolve a organização com os clientes, funcionários e todas as entidades envolvidas.
+
+## Cada letra tem seu significado no e-business
+
+- **B**: business, empresa ou fornecedor;
+- **C**: consumer, consumidor ou cliente;
+- **E**: employee, empregado;
+- **G**: government, governo;
+- **D**: direct, direto.
+
+## Tipos de Negócios Eletrônicos
+
+- **B2C**: Business-to-consumer - Empresa para consumidor
+- **B2B**: Business-to-business – Empresa para empresa
+- **B2E**: Business-to-employee – Empresas para colaboradores
+- **B2G**: Business-to-government – Empresas para governos
+- **C2B**: Consumer-to-business – Consumidor para empresas
+- **G2B**: Government-to-business – Governo para empresas
+- **G2C**: Government-to-consumer – Governo para consumidores
+- **C2G**: Consumer-to-government – Consumidor para governo
+- **B2B2C**: Business-to-Business-to-Consumer – Empresas para empresas para consumidor
+- **D2C**: Direct-to-Consumer – Direto para consumidores, venda direta do fabricante ao consumidor final
+- **C2C**: Consumer-to-Consumer – Consumidor para consumidor
+
+## Marketplace
+
+"É uma plataforma colaborativa, também denominada shopping virtual, onde um conjunto de empresas ofertam produtos e serviços no mesmo endereço, na internet. O processo de vendas, geralmente, fica sob responsabilidade do organizador, que disponibiliza aos usuários uma estrutura digital com formas de pagamentos seguras e cálculos de frete integrados", de acordo com o Sebrae.
+
+## Multichannel e Omnichannel
+
+- **Multichannel**: empresas que têm mais de um canal de vendas.
+- **Omnichannel**: integração dos canais, diferentes canais de uma mesma empresa que se conversam.
+
+---
+
+# Redes Sociais
+
+## Principais Objetivos
+
+- Compartilhamento
+- Aprendizagem
+- Interação
+- Marketing
+
+## Benefícios
+
+- Consciência e marca
+- Acessibilidade instantânea
+- Construção de uma sequência
+- Sucesso nos negócios
+- Aumento do tráfego do site
+
+## Desvantagens
+
+- Rumores e desinformação
+- Críticas e comentários negativos
+- Preocupações com segurança e privacidade de dados
+- Processo demorado (devido a manutenção constante)
+
+## Tipos de Sites de Redes Sociais
+
+- Conexões sociais (Facebook, Instagram, Twitter)
+- Conexões profissionais (LinkedIn, Twitter)
+- Compartilhamento de multimídia (YouTube, Flickr)
+- Informativo (Reddit, Quora)
+- Educacional (Google Classroom, LinkedIn Learning)
+
+---
+
+# Social Network Analysis (SNA)
+
+É um método de identificação e mapeamento da estrutura social dentro de uma organização. É a avaliação, medição e mapeamento das relações entre os atores de uma rede social. Cada ator em uma rede social também é chamado de nó. Um laço de rede é uma conexão ou relacionamento (link) entre atores ou nós.
+
+- **Conectores centrais**: indivíduos no centro da rede que estão conectados a um grande número de indivíduos.
+- **Chaves de fronteira**: indivíduos que conectam grupos sociais, criando uma ponte de comunicação entre eles.
+- **Especialistas periféricos**: pessoas de fora que são independentes do grupo, mas estão conectadas de alguma forma - geralmente para projetos especializados.
+
+Os laços de rede podem ser agrupados em:
+
+- **Laços diretos**: vínculo único ou pessoal entre dois atores.
+- **Laços indiretos**: um ator está ligado a outro ator apenas por um terceiro ator.
+
+Um laço também pode ser definido como:
+
+- **Direção**: fluxo direto de informações;
+- **Bidirecional**: fluxo de informações para trás e para frente.
+
+O número de ligações entre dois atores é conhecido como graus de separação. O tamanho da rede é o número de atores. Centralidade é a extensão em que um ator está no meio de uma rede. A densidade diz respeito a quantas pessoas estão conectadas em uma rede. O capital social diz respeito aos recursos (ideias, informações, dinheiro, confiança etc.) dentro das redes pessoais e empresariais.
+
+A análise pode ser realizada por meio de dois métodos:
+
+- **Análise indireta**: analisa informações secundárias para determinar se existe uma rede social.
+- **Análise direta**: pesquisa direta de indivíduos para identificar com quem eles se identificam ou se associam.
+
+Determinantes da eficácia de uma rede social: atividade, controle, acesso, influência e poder.
+
+---
+
+# SEO – Search Engine Optimization
+
+Otimização de mecanismos de busca. Além de obter uma classificação alta nas SERPs para palavras-chave específicas, possibilita que os clientes em potencial encontrem o site da maneira mais fácil possível.
+
+## Dicas para Melhorar o Desempenho de um Site
+
+- Menos solicitações HTTP
+- Code Splitting e Tree Shaking
+- Lazy Loading
+- Adiar scripts
+- Otimizar imagens
+- Usar uma CDN (Content Delivery Network)
+- Habilitar o cache
+
+## Abordagens para um Site Otimizado
+
+- SEO
+- Redação
+- Análise
+- UX Design (front-end)
+- Desenvolvimento Web (back-end)
+- Otimização de CRO/Landing Page
+
+---
+
+# Google Adwords (Google Ads)
+
+Plataforma que pode ser usada como anunciante para exibir seus anúncios nas páginas de resultados de pesquisa do Google, sites parceiros ou na Rede de Display do Google (sites que exibem anúncios do Google). O anunciante só paga quando alguém clica no anúncio (Pay Per Click).
+
+## Google Adsense
+
+Serviço que permite aos webmasters exibir anúncios do Google em seus sites. Gera lucros a partir da quantidade de cliques ou visualizações.
+
+---
+
+# Sistemas de Pagamento Online
+
+Consistem em três partes: o gateway de pagamento, o processador de pagamento e a conta do comerciante.
