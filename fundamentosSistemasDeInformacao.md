@@ -180,3 +180,90 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 ## Recursos na Nuvem
 ![Relação de vantagens e desvantagens da computação em nuvem](./assets/images/Computação%20em%20nuvem.png)
+
+# Sistemas de Gestão: ERP, SCM, CRM e SGC
+
+## 1. ERP (Enterprise Resource Planning)
+**Definição:** Sistema que integra e automatiza processos de negócios, centralizando informações em um banco de dados acessível em tempo real.
+
+**Vantagens:**
+- Melhora a visibilidade interdepartamental.
+- Reduz conflitos de dados e aumenta a eficiência.
+- Facilita a análise de cenários e identificação de melhorias.
+
+**Objetivo:** Unificar pessoas, processos e tecnologia, otimizando operações à medida que a empresa cresce.
+
+## 2. SCM (Supply Chain Management)
+**Definição:** Gerencia a cadeia de suprimentos, desde a aquisição de matérias-primas até a entrega dos produtos finais.
+
+**Funções:**
+- Inclui planejamento, compras, criação de produtos e gerenciamento de pedidos.
+- Acessível a todas as partes interessadas na cadeia de suprimentos.
+
+**Objetivo:** Melhorar a supervisão dos processos, agilizar entregas e reduzir custos, adaptando-se às demandas dos clientes.
+
+## 3. CRM (Customer Relationship Management)
+**Definição:** Sistema para gerenciar interações e dados dos clientes, visando fortalecer relacionamentos.
+
+**Benefícios:**
+- Aumenta a satisfação e retenção de clientes.
+- Melhora o entendimento das necessidades dos clientes.
+- Facilita a identificação de clientes lucrativos e a realização de vendas cruzadas.
+
+**Objetivo:** Desenvolver relacionamentos mais fortes e responsivos com os clientes.
+
+## 4. SGC (Sistemas de Gestão do Conhecimento)
+**Definição:** Processo de coletar, armazenar e compartilhar informações valiosas na organização.
+
+---
+
+# Gestão de Documentos e Big Data
+
+## 1. Gestão de Documentos
+**Conceito:** Os sistemas de gerenciamento de documentos funcionam como "armários eletrônicos" para organizar documentos digitais e em papel, permitindo a captura, armazenamento, gerenciamento, distribuição e preservação das informações.
+
+### Etapas do Processo
+- **Captura:** Digitalização de documentos físicos.
+- **Armazenamento:** Organização e segurança dos arquivos.
+- **Gerenciamento:** Controle sobre o acesso e versões dos documentos.
+- **Distribuição:** Compartilhamento de informações com usuários autorizados.
+- **Preservação:** Manutenção e proteção dos dados ao longo do tempo.
+
+### Tipos de Sistemas
+- **Local:**
+  - **Prós:** Controle total, acesso offline.
+  - **Contras:** Custos iniciais altos, manutenção e segurança a cargo da empresa.
+
+- **Baseado em Nuvem:**
+  - **Prós:** Menores custos iniciais, acessibilidade, manutenção simplificada.
+  - **Contras:** Dependência da conexão à internet, riscos de segurança.
+
+### Recursos Importantes
+- **Armazenamento Seguro:** Armazenar documentos de forma organizada.
+- **Pesquisa por Palavra-Chave:** Facilita a recuperação de documentos.
+- **Controle de Acesso:** Permissões para proteger informações sensíveis.
+- **Histórico de Edição:** Rastreamento de alterações em documentos.
+- **Acesso Móvel:** Capacidade de acessar documentos via dispositivos móveis.
+
+## 2. Big Data
+**Definição:** Big Data refere-se a conjuntos de dados extremamente grandes e complexos que não podem ser gerenciados por ferramentas tradicionais. Caracteriza-se por:
+- **Volume:** Grande quantidade de dados gerados.
+- **Variedade:** Diversidade de tipos de dados (estruturados e não estruturados).
+- **Velocidade:** Rapidez na geração e processamento dos dados.
+- **Variabilidade:** Inconsistência nos dados ao longo do tempo.
+
+### Importância
+As empresas utilizam Big Data para:
+- Identificar padrões e tendências.
+- Tomar decisões baseadas em dados concretos.
+- Personalizar produtos e serviços para melhorar a experiência do cliente.
+
+### Exemplos de Aplicação
+- **E-commerce:** Experiências de compra personalizadas.
+- **Saúde:** Análise de dados para pesquisas médicas.
+- **Marketing:** Segmentação de públicos com base em hábitos de consumo.
+
+### Desafios
+- **Armazenamento:** Necessidade de infraestrutura robusta.
+- **Segurança:** Risco de acesso não autorizado aos dados.
+- **Escalabilidade:** Capacidade de se adaptar a crescimentos futuros.
