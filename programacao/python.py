@@ -1,5 +1,7 @@
-# Atividade prática 01
-## Exercício 01
+# Atividade prática 1
+
+## Exercício 1
+
 from functools import total_ordering
 
 preco = float(input('Digite o preço do produto: '))
@@ -11,7 +13,7 @@ final = preco - desconto
 print(f'O preço do produto é {preco}. Desconto de {percentual}%')
 print(f'Valor calculado de desconto: {desconto}. Valor final do produto: {final}')
 
-## Exercício 02
+## Exercício 2
 
 km = int(input('Quantos km foram percorridos?'))
 dias = int(input('Por quantos dias o carro foi alugado?'))
@@ -125,6 +127,6 @@ while True:
 
 if qtdPessoas > 0:
     mediaIdades = somaIdades / qtdPessoas
-    print(f"Valor total: R${valorTotal}. Média de idades: {mediaIdades:.2f}")
+    print(f"Valor total: R${valorTotal}. Média de idades: {mediaIdades}")
 else:
     print("Não foi possível prosseguir")
