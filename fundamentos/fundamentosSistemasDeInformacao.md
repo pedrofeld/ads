@@ -21,14 +21,14 @@
 - **Modelo**: dados -> processamento -> informações.
 
 ## Elementos de um sistema de informação
-![Representação de elementos de um sistema de informação](./assets/images/Elementos%20de%20um%20sistema%20de%20informação.png)
+![Representação de elementos de um sistema de informação](/assets/images/Elementos%20de%20um%20sistema%20de%20informação.png)
 
 ## Hardware vs Software
 - **Hardware**: Dispositivo físico usado em ou com uma máquina.
 - **Software**: Conjunto de códigos instalados no disco rígido de um computador.
 - **Comparação**: Hardware é o que você chuta, software é o que você xinga.
 - O software se divide em duas grandes classes: software de sistema e software de aplicação. O software de sistema principal é o sistema operacional, que gerencia o hardware, geralmente por meio de uma interface gráfica de usuário (GUI).
-![Representação de Hardware versus Software](./assets/images/Hardware%20VS%20Software.png)
+![Representação de Hardware versus Software](/assets/images/Hardware%20VS%20Software.png)
 
 ## Dado, informação e conhecimento
 - **Dados**: "Sinais desprovidos de interpretação ou significado." (Maldon).
@@ -43,10 +43,10 @@
 - **Sistemas de informação**: Compreendem pessoas, processos, máquinas e tecnologia da informação, focando na criação e distribuição de informações.
 
 ## Classificações de sistemas de informação
-![Classificação de um sistema de informação conforme a abrangência](./assets/images/SIstemas%20de%20informação%20empresariais.png)
+![Classificação de um sistema de informação conforme a abrangência](/assets/images/SIstemas%20de%20informação%20empresariais.png)
 - **Critério**: Abrangência departamental.
 
-![Classificação dos sistemas de informações conforme o nível decisório](./assets/images/Sistemas%20de%20informação%20empresariais%20nível%20decisório.png)
+![Classificação dos sistemas de informações conforme o nível decisório](/assets/images/Sistemas%20de%20informação%20empresariais%20nível%20decisório.png)
 - **Critério**: Nível funcional.
 
 ### Níveis:
@@ -59,7 +59,7 @@
 - **Sistema de informação tático (SIGs)**: Focado em fornecer informações para decisões em níveis gerenciais intermediários.
 - **Sistema de planejamento estratégico (SISs)**: Apoia o planejamento de longo prazo e a formulação de estratégias.
 
-![Processo de entrada, processamento e saída de um sistema de informação](./assets/images/Tipos%20de%20sistema%20de%20informação%20e%20seus%20níveis.png)
+![Processo de entrada, processamento e saída de um sistema de informação](/assets/images/Tipos%20de%20sistema%20de%20informação%20e%20seus%20níveis.png)
 
 ## Componentes de um sistema de informação
 - **Software**: Programas e procedimentos.
@@ -68,7 +68,7 @@
 - **Rede**: Hubs, meios de comunicação e dispositivos de rede.
 - **Pessoas**: Operadores de dispositivos, administradores de rede e especialistas em sistemas.
 
-![Funções de um sistema de informação](./assets/images/Funções%20de%20um%20sistema%20de%20informação.png)
+![Funções de um sistema de informação](/assets/images/Funções%20de%20um%20sistema%20de%20informação.png)
 
 O processamento da informação inicia-se na *entrada*; após, há o *processo* de dados, o armazenamento de dados, a saída e o controle. Durante o estágio de entrada, as instruções de dados são alimentadas nos sistemas que, durante o estágio de processo, são trabalhados por programas de software e outras consultas. Durante a fase de *saída*, os dados são apresentados em formato estruturado e relatórios.
 
@@ -179,7 +179,7 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 - **Rede Privada Virtual (VPN)**: Acesso remoto seguro à rede interna.
 
 ## Recursos na Nuvem
-![Relação de vantagens e desvantagens da computação em nuvem](./assets/images/Computação%20em%20nuvem.png)
+![Relação de vantagens e desvantagens da computação em nuvem](/assets/images/Computação%20em%20nuvem.png)
 
 # Sistemas de Gestão: ERP, SCM, CRM e SGC
 
@@ -193,7 +193,7 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 **Objetivo:** Unificar pessoas, processos e tecnologia, otimizando operações à medida que a empresa cresce.
 
-![Estrutura típica de funcionamento de um sistema ERP](./assets/images/ERP.png)
+![Estrutura típica de funcionamento de um sistema ERP](/assets/images/ERP.png)
 
 ## 2. SCM (Supply Chain Management)
 **Definição:** Gerencia a cadeia de suprimentos, desde a aquisição de matérias-primas até a entrega dos produtos finais.
@@ -204,7 +204,7 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 **Objetivo:** Melhorar a supervisão dos processos, agilizar entregas e reduzir custos, adaptando-se às demandas dos clientes.
 
-![Representação do processo de SCM](./assets/images/Processo%20de%20SCM.png)
+![Representação do processo de SCM](/assets/images/Processo%20de%20SCM.png)
 
 ## 3. CRM (Customer Relationship Management)
 **Definição:** Sistema para gerenciar interações e dados dos clientes, visando fortalecer relacionamentos.
@@ -270,7 +270,7 @@ O processamento da informação inicia-se na *entrada*; após, há o *processo* 
 
 **Impacto:** O BI permite decisões informadas baseadas em dados históricos, melhorando a eficácia das estratégias de negócios.
 
-![Ambiente de inteligência empresarial](./assets/images/Ambiente%20de%20inteligência%20empresarial.png)
+![Ambiente de inteligência empresarial](/assets/images/Ambiente%20de%20inteligência%20empresarial.png)
 
 ---
 
