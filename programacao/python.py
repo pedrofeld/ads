@@ -42,7 +42,7 @@ while True:
     qtd = int(input("Quantas unidades quer comprar? "))
 
     if (op == 1):
-        tototalPedidotal = totalPedido + qtd * 5
+        tototalPedido = totalPedido + qtd * 5
     elif (op == 2):
         totalPedido = totalPedido + qtd * 7
     elif (op == 3):
