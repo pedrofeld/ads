@@ -42,7 +42,7 @@ while True:
     qtd = int(input("Quantas unidades quer comprar? "))
 
     if (op == 1):
-        tototalPedido = totalPedido + qtd * 5
+        totalPedido = totalPedido + qtd * 5
     elif (op == 2):
         totalPedido = totalPedido + qtd * 7
     elif (op == 3):
@@ -130,3 +130,18 @@ if qtdPessoas > 0:
     print(f"Valor total: R${valorTotal}. Média de idades: {mediaIdades}")
 else:
     print("Não foi possível prosseguir")
+
+# Aula teórica 5
+
+## Exercício 1
+
+def borda(s1):
+    tam = len(s1)
+    # só imprime caso exista algum caractere
+    if tam:
+        print('+', '-' * tam, '+')
+        print('|', s1, '|')
+        print('+', '-' * tam, '+')
+
+borda('Olá, Mundo!')
+borda('Lógica de Programação e Algoritmos')
