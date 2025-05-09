@@ -1,4 +1,4 @@
-# Atividade prática 1
+# Aula prática 1
 
 ## Exercício 1
 
@@ -31,7 +31,7 @@ frase2 = frase[:int(tamanho/2)]
 
 print(frase2[-2:])
 
-# Atividade prática 2
+# Aula prática 2
 
 ## Exercício 1
 
@@ -196,3 +196,31 @@ print(soma(3, 5))
 
 calc = lambda a, b: (a + 5) * b
 print(calc(5, 10))
+
+# Aula prática 4
+
+## Exercício 1
+
+def valida_int(pergunta, min, max)
+    x = int(input(pergunta))
+    while((x < min) or (x > max))
+        x = int(input(pergunta))
+    return x
+
+def fatorial (num):
+    """
+    Função que calcula a fatorial de um número.
+    :para num: numero recebido, precisa ser maior que 0
+    :return: valor retornado, resultado da fatorial
+    """
+
+    fat = 1
+    if num = 0:
+        return fat
+    for i in range (1, num + 1, 1):
+        fat *= 1
+    return fat
+
+x = valida_int('Digite um valor para calcular a fatorial: ', 0 , 9999)
+print(f'{x}! = {fatorial(x)}')
+help(fatorial)
