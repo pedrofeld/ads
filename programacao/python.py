@@ -145,3 +145,16 @@ def borda(s1):
 
 borda('Olá, Mundo!')
 borda('Lógica de Programação e Algoritmos')
+
+## Exercício 2
+
+def valida_string(pergunta, min, max):
+    s2 = input(pergunta)
+    tam = len(s2)
+    while ((tam < min) or (tam > max)):
+        s2 = input(pergunta)
+        tam = len(s2)
+    return s2
+
+x = valida_string('Digite uma string: ', 10, 30)
+print('Você digitou a string {}. \n Dado válido. Encerrando o programa...'.format(x))
