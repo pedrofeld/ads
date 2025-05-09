@@ -158,3 +158,30 @@ def valida_string(pergunta, min, max):
 
 x = valida_string('Digite uma string: ', 10, 30)
 print('Você digitou a string {}. \n Dado válido. Encerrando o programa...'.format(x))
+
+## Exercício 3
+
+while True:
+    try:
+        x = int(input('Digite um número: '))
+        break
+    except ValueError:
+        print('Número inválido, tente novamente')
+
+## Exercício 4
+
+i = 0
+
+while True:
+    try:
+        nome = input('Digite seu nome: ')
+        ind = int(input('Digite um índice do seu nome digitado: '))
+        print(nome[ind])
+        break
+    except ValueError:
+        print('Nome inválido, o dado inserido precisa ser uma string')
+    except IndexError:
+        print('índice inválido, o dado inserido precisa ser um número existente')
+    finally:
+        print(f'Tentativa [i]')
+        i += 1
