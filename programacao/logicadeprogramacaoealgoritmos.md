@@ -124,6 +124,21 @@ texto = "Python"
 print(texto.upper())  # resultado: PYTHON
 ```
 
+### Métodos de Strings
+- `lower()`: converte todos os caracteres para minúsculas.
+- `upper()`: converte todos os caracteres para maiúsculas.
+- `startswith()`: verifica se a string começa com o prefixo especificado.
+- `find()`: retorna o índice da primeira ocorrência de uma substring.
+- `replace()`: substitui uma substring por outra.
+
+```python
+texto = "Olá, Mundo!"
+print(texto.lower())          # resultado: olá, mundo!
+print(texto.startswith("Olá")) # resultado: True
+print(texto.find("Mundo"))     # resultado: 5
+print(texto.replace("Mundo", "Python")) # resultado: Olá, Python!
+```
+
 ---
 
 ## 📚 Dicionários
