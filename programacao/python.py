@@ -201,9 +201,9 @@ print(calc(5, 10))
 
 ## Exercício 1
 
-def valida_int(pergunta, min, max)
+def valida_int(pergunta, min, max):
     x = int(input(pergunta))
-    while((x < min) or (x > max))
+    while((x < min) or (x > max)):
         x = int(input(pergunta))
     return x
 
@@ -215,7 +215,7 @@ def fatorial (num):
     """
 
     fat = 1
-    if num = 0:
+    if num == 0:
         return fat
     for i in range (1, num + 1, 1):
         fat *= 1
