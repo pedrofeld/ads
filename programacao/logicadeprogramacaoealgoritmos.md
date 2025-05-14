@@ -55,42 +55,92 @@ else:
 
 ---
 
-## 🔁 `while`, `True`, `break`
-Controlam **laços de repetição**:
+## 🔁 Estruturas de Repetição
+
+### 📏 `for`
+Usado para iterar sobre uma sequência (como uma lista ou string).
 
 ```python
-while True:
-    idade = int(input("Digite a idade: "))
-    if idade == 0:
-        break
+for i in range(5):
+    print(i)  # resultado: 0, 1, 2, 3, 4
 ```
 
-- `while`: repete enquanto a condição for verdadeira.
-- `True`: valor booleano sempre verdadeiro → loop infinito.
-- `break`: **interrompe** o loop imediatamente.
+- `range(n)`: gera uma sequência de números de 0 até n-1.
 
 ---
 
-## 📏 `len()`
-Retorna o **tamanho** de uma string (ou lista).
+### 🔄 `while`
+Executa um bloco de código enquanto a condição for verdadeira.
 
 ```python
-len("Pedro")  # resultado: 5
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1  # resultado: 0, 1, 2, 3, 4
 ```
 
 ---
 
-## ✅ `Truthy` e ❌ `Falsey`
-São **valores considerados verdadeiros ou falsos** em uma condição.
+## ⚙️ Funções
 
-| Valor                   | É considerado... |
-|-------------------------|------------------|
-| `0`, `""`, `None`, `[]` | ❌ **Falsey**     |
-| Qualquer outro valor    | ✅ **Truthy**     |
-
-Exemplo:
+### `def`
+Define uma função que pode ser chamada posteriormente.
 
 ```python
-if not valor:  # entra aqui se valor for 0 (Falsey)
-    break
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+print(saudacao("Maria"))  # resultado: Olá, Maria!
+```
+
+---
+
+## 📊 Tuplas
+Estruturas de dados imutáveis. São criadas com parênteses.
+
+```python
+tupla = (1, 2, 3)
+print(tupla[0])  # resultado: 1
+```
+
+---
+
+## 📋 Listas
+Estruturas de dados mutáveis. Criadas com colchetes.
+
+```python
+lista = [1, 2, 3]
+lista.append(4)  # adiciona 4
+print(lista)     # resultado: [1, 2, 3, 4]
+```
+
+---
+
+## 🔤 Strings
+Sequências de caracteres. Várias operações podem ser realizadas.
+
+```python
+texto = "Python"
+print(texto.upper())  # resultado: PYTHON
+```
+
+---
+
+## 📚 Dicionários
+Estruturas de dados que armazenam pares chave-valor.
+
+```python
+dicionario = {"nome": "Pedro", "idade": 25}
+print(dicionario["nome"])  # resultado: Pedro
+```
+
+---
+
+## 📦 Importação de Bibliotecas
+Permite usar funções de bibliotecas externas.
+
+```python
+import math
+
+print(math.sqrt(16))  # resultado: 4.0
 ```
