@@ -159,3 +159,23 @@ import math
 
 print(math.sqrt(16))  # resultado: 4.0
 ```
+
+---
+
+## 🖥️ Arquitetura de Von Neumann
+Modelo fundamental para a organização de computadores, proposto por John von Neumann. 
+
+### Principais Componentes:
+- **CPU**: Composta pela ALU (Unidade Lógica e Aritmética) e registradores.
+- **Memória**: Armazena dados e instruções.
+- **Dispositivos de I/O**: Interagem com o mundo externo (entrada e saída).
+- **Barramento**: Conecta todos os componentes.
+
+### Características:
+- Armazenamento unificado de dados e instruções.
+- Execução sequencial de instruções.
+- Ciclo de Fetch-Decode-Execute (buscar, decodificar, executar).
+
+### Vantagens e Desvantagens:
+- **Vantagens**: Simplicidade e flexibilidade.
+- **Desvantagens**: Gargalo de Von Neumann e vulnerabilidades de segurança.
