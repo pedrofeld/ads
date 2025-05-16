@@ -17,11 +17,8 @@
 # Deve-se apresentar na saída de console uma mensagem de boas-vindas com seu nome [EXIGÊNCIA DE SAÍDA DE CONSOLE 1 de 2];
 # Deve-se apresentar na saída de console um pedido recebendo desconto (valor total sem desconto maior ou igual a 2500) [EXIGÊNCIA DE SAÍDA DE CONSOLE 2 de 2];  
 
-# Solicitando nome e sobrenome do usuário
-nome = input('Digite seu nome e sobrenome: ')
-
 # Exibindo mensagem de boas-vindas
-print(f'Bem-vindo(a), {nome}!')
+print("Bem-vindo a Loja do Pedro Feld")
 
 # Solicitando valor unitário e quantidade do produto
 valor = int(input('Digite o valor unitário do produto: '))
