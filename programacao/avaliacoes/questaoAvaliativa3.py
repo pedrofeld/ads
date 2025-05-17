@@ -42,3 +42,78 @@
 # Deve-se apresentar na saída de console um pedido no qual o usuário digitou ultrapassou no número de páginas [EXIGÊNCIA DE SAÍDA DE CONSOLE 3 de 4];
 # Deve-se apresentar na saída de console um pedido com opção de serviço, número de páginas e serviço extra válidos [EXIGÊNCIA DE SAÍDA DE CONSOLE 4 de 4];
 
+# Print com uma mensagem de boas-vindas
+print("Bem-vindo a Copiadora do Pedro Feld")
+
+# Funções
+def escolha_servico():
+    """
+    Função para escolher o serviço desejado.
+    Retorna o valor do serviço com base na escolha do usuário.
+    Repete a pergunta se o usuário digitar uma opção diferente de: dig/ico/ipb/fot.
+    """
+    
+    while True:
+        servico = input("Escolha o serviço desejado (dig/ico/ipb/fot): ").strip().lower()
+        if servico == "dig":
+            return 1.10
+        elif servico == "ico":
+            return 1.00
+        elif servico == "ipb":
+            return 0.40
+        elif servico == "fot":
+            return 0.20
+        else:
+            print("Escolha inválida, entre com o tipo de serviço novamente.")
+            continue
+
+def num_pagina():
+    """
+    Função para perguntar o número de páginas.
+    Retorna o número de páginas com desconto.
+    Repete a pergunta se o usuário digitar um valor acima de 20000 ou um valor não numérico (utilizando try/except).
+    """
+    while True:
+        try:
+            num_pagina = int(input("Digite o número de páginas: "))
+            if num_pagina < 20:
+                return num_pagina
+            elif 20 <= num_pagina < 200:
+                return num_pagina * 0.85
+            elif 200 <= num_pagina < 2000:
+                return num_pagina * 0.80
+            elif 2000 <= num_pagina < 20000:
+                return num_pagina * 0.75
+            else:
+                print("Não aceitamos tantas páginas de uma vez. Por favor, entre com o número de páginas novamente.")
+                continue
+        except ValueError:
+            print("Número de páginas inválido. Por favor, insira um número inteiro.")
+            continue
+
+def servico_extra():
+    """
+    Função para perguntar pelo serviço adicional.
+    Retorna o valor de apenas uma das opções de adicional.
+    Repete a pergunta se o usuário digitar uma opção diferente de: 1/2/0.
+    """
+    while True:
+        servico_extra = input("Escolha o serviço adicional (1 - encadernação simples, 2 - encadernação capa dura, 0 - nenhum): ").strip()
+        if servico_extra == "1":
+            return 15.00
+        elif servico_extra == "2":
+            return 40.00
+        elif servico_extra == "0":
+            return 0.00
+        else:
+            print("Opção inválida, escolha novamente.")
+            continue
+
+# Chamando das funções
+servico = escolha_servico() 
+num_pagina = num_pagina()
+servico_extra = servico_extra()
+
+# Cálculo do total a pagar na main
+total = (servico * num_pagina) + servico_extra
+print(f"Total a pagar: R$ {total:.2f} (serviço: {servico}, número de páginas: {num_pagina}, serviço extra: {servico_extra})")
