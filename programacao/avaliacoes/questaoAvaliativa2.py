@@ -21,3 +21,50 @@
 # Deve-se apresentar na saída de console um pedido em que o usuário errou o tamanho [EXIGÊNCIA DE SAÍDA DE CONSOLE 3 de 4];
 # Deve-se apresentar na saída de console um pedido com duas opções sabores diferentes e com tamanhos diferentes [EXIGÊNCIA DE SAÍDA DE CONSOLE 4 de 4];
 
+# Print com mensagem de boas-vindas
+print("Bem-vindo a Loja de Gelados do Pedro Feld")
+
+# Acumulador para somar os valores dos pedidos
+total = 0
+
+while True:
+    # Input do sabor e validação
+    sabor = input("Escolha um sabor (CP/AC): ").strip().upper()
+    while sabor not in ["CP", "AC"]:
+        print("Sabor inválido. Tente novamente")
+        sabor = input("Escolha um sabor (CP/AC): ").strip().upper()
+
+    # Input do tamanho e validação
+    tamanho = input("Escolha um tamanho (P/M/G): ").strip().upper()
+    while tamanho not in ["P", "M", "G"]:
+        print("Tamanho inválido. Tente novamente")
+        tamanho = input("Escolha um tamanho (P/M/G): ").strip().upper()
+
+    # Cálculo do preço utilizando o modelo aninhado
+    if sabor == "CP":
+        if tamanho == "P":
+            total += 9
+        elif tamanho == "M":
+            total += 14
+        elif tamanho == "G":
+            total += 18
+    elif sabor == "AC":
+        if tamanho == "P":
+            total += 11
+        elif tamanho == "M":
+            total += 16
+        elif tamanho == "G":
+            total += 20
+
+    # Pergunta se deseja pedir mais alguma coisa
+    continuar = input("Deseja pedir mais alguma coisa? (s/n): ").strip().lower()
+    if continuar == 'n':
+        break
+    elif continuar == 's':
+        continue
+    else:
+        print("Opção inválida. Encerrando o programa.")
+        break
+
+# Print do acumulador
+print(f"Total acumulado: R$ {total}.00")
