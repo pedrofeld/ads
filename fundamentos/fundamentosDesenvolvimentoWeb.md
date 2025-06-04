@@ -251,13 +251,6 @@ overflow: visible | hidden | scroll | auto;
 
 ---
 
-## ✅ Finalização
-
-Com HTML e CSS, você pode criar páginas web estruturadas e estilizadas. Pratique os conceitos para reforçar seu aprendizado e desenvolver layouts cada vez mais completos.
-
-
----
-
 ## Aula 3 – CSS Avançado
 
 ## 📘 TEMA 1 – Árvore do Documento (DOM)
