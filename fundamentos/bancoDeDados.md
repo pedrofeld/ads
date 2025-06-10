@@ -190,3 +190,142 @@ Evitar redundância, inconsistências e melhorar integridade.
 - **T-SQL** – Microsoft SQL Server
 - **PL/pgSQL** – PostgreSQL
 - **SQL/PL** – DB2 (IBM)
+
+---
+
+# 📘 Resumo - Aula 3: Banco de Dados
+
+## Tipos de Dados em SQL (SQL Data Types)
+
+### Categorias:
+1. **Numéricos:** `int`, `float`, `decimal`, `bit`, etc.
+2. **Strings (Cadeias de caracteres):**
+   - Binários: `binary`, `varbinary`, `blob`
+   - Não-binários: `char`, `varchar`, `text`
+3. **Temporais:** `date`, `time`, `datetime`, `timestamp`, `year`
+
+### Dicas Importantes:
+- `varchar` usa menos espaço que `char` quando há campos pouco preenchidos.
+- `float` e `double` não têm escala definida. `decimal` permite precisão e escala exatas.
+- `timestamp` considera fuso horário; `datetime` não.
+
+---
+
+## Comandos SQL Essenciais
+
+### Mostrar bancos e tabelas:
+```sql
+SHOW DATABASES;
+USE nome_banco;
+SHOW TABLES;
+DESCRIBE nome_tabela;
+```
+
+### Criar banco e tabela:
+```sql
+CREATE DATABASE nome_banco;
+CREATE TABLE nome_tabela (
+  id INT,
+  nome VARCHAR(100),
+  PRIMARY KEY(id)
+);
+```
+
+### Inserir dados:
+```sql
+INSERT INTO nome_tabela (col1, col2) VALUES (val1, val2);
+```
+
+### Consultar dados:
+```sql
+SELECT * FROM nome_tabela;
+SELECT coluna1, coluna2 FROM nome_tabela;
+SELECT * FROM nome_tabela WHERE coluna IS NULL;
+SELECT * FROM nome_tabela ORDER BY coluna DESC;
+```
+
+### Excluir objetos:
+```sql
+DROP TABLE nome_tabela;
+DROP DATABASE nome_banco;
+```
+
+---
+
+## Chaves (Constraints)
+
+### Chave Primária (PK):
+```sql
+id INT NOT NULL,
+PRIMARY KEY(id)
+```
+
+### Chave Estrangeira (FK):
+```sql
+estado_id INT NOT NULL,
+FOREIGN KEY (estado_id) REFERENCES estado(id)
+  ON DELETE NO ACTION ON UPDATE NO ACTION
+```
+
+### Chave Única (UK):
+```sql
+cnh INT UNIQUE
+```
+
+### Chave Composta:
+```sql
+PRIMARY KEY(pedido_id, produto_id)
+```
+
+---
+
+## Outras Restrições
+
+- `NOT NULL`: impede valores nulos.
+- `CHECK`: (não funciona no MySQL) restringe valores a uma lista.
+- `DEFAULT`: valor padrão para a coluna.
+```sql
+estadoCivil CHAR(1) DEFAULT 'S'
+```
+
+---
+
+## Comando ALTER TABLE
+
+### Adicionar coluna:
+```sql
+ALTER TABLE nome_tabela ADD nova_coluna TIPO(TAM);
+```
+
+### Modificar estrutura:
+```sql
+ALTER TABLE nome_tabela MODIFY coluna TIPO(TAM);
+```
+
+### Renomear coluna:
+```sql
+ALTER TABLE nome_tabela CHANGE nome_antigo nome_novo TIPO(TAM);
+```
+
+### Excluir coluna:
+```sql
+ALTER TABLE nome_tabela DROP COLUMN nome_coluna;
+```
+
+### Adicionar FK depois:
+```sql
+ALTER TABLE produto ADD tipoProduto_id INT NOT NULL;
+ALTER TABLE produto ADD CONSTRAINT fk_tipo
+FOREIGN KEY (tipoProduto_id) REFERENCES tipoProduto(id);
+```
+
+---
+
+## Propriedades Especiais
+
+- `UNSIGNED`: impede números negativos.
+- `ZEROFILL`: preenche com zeros à esquerda.
+- `AUTO_INCREMENT`: incrementa automaticamente um valor inteiro na coluna PK.
+```sql
+id INT UNSIGNED ZEROFILL AUTO_INCREMENT PRIMARY KEY
+```
