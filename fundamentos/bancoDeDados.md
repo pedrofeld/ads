@@ -329,3 +329,172 @@ FOREIGN KEY (tipoProduto_id) REFERENCES tipoProduto(id);
 ```sql
 id INT UNSIGNED ZEROFILL AUTO_INCREMENT PRIMARY KEY
 ```
+
+---
+
+# 📘 Resumo - Aula 4: Banco de Dados (SQL - DML e Consultas)
+
+## 👨‍🏫 Professores
+Ricardo Sonaglio Albano e Silvie Guedes Albano
+
+---
+
+## 1. 📥 Inclusão de Registros (INSERT)
+
+- `INSERT INTO tabela (colunas) VALUES (valores);`
+- Aspas simples para `CHAR` e `DATE`; números sem aspas.
+- `NULL` pode ser usado em campos opcionais.
+- `auto_increment`: não deve ser incluído.
+- Pode inserir em colunas específicas se respeitar restrições.
+- Subquery: `INSERT INTO cliente (nome, cidadeId) SELECT nomeFunc, cidadeId FROM funcionario;`
+- Vários registros: `INSERT INTO tabela VALUES (1, 'A'), (2, 'B');`
+
+### ⚠️ Erros comuns:
+- Campo `NOT NULL` sem valor.
+- PK duplicada.
+- Número de colunas ≠ número de valores.
+- FK sem correspondência na tabela pai.
+
+---
+
+## 2. ❌ DELETE e ✏️ UPDATE
+
+### DELETE
+```sql
+DELETE FROM tabela WHERE condição;
+```
+- Sem `WHERE` = apaga tudo.
+- `TRUNCATE TABLE` é mais rápido, mas não aciona triggers nem cascade.
+
+### ON DELETE
+- `NO ACTION`: impede exclusão se houver dependentes.
+- `CASCADE`: apaga tudo relacionado automaticamente.
+
+### UPDATE
+```sql
+UPDATE tabela SET coluna = valor WHERE condição;
+```
+- Use `WHERE` para evitar atualizar tudo.
+- Pode usar `SET coluna = (SELECT ...)` para atualizar dinamicamente.
+- `ON UPDATE CASCADE`: atualiza FKs automaticamente.
+
+---
+
+## 3. 🔍 Restrições e Filtros em Consultas
+
+### 🧠 Operadores Lógicos
+- `AND`, `OR`, `NOT`
+
+### 🔢 Relacionais
+- `=`, `<>`, `>`, `<`, `>=`, `<=`
+- `IN`, `NOT IN`, `LIKE`, `BETWEEN`, `IS NULL`, `EXISTS`
+
+### ➕ Aritméticos
+- `+`, `-`, `*`, `/`  
+  (Se `NULL` estiver envolvido, resultado é `NULL`)
+
+### Exemplos:
+```sql
+SELECT * FROM cliente WHERE salario BETWEEN 5000 AND 8000;
+SELECT * FROM cidade WHERE uf IS NOT NULL;
+SELECT * FROM cliente WHERE nome LIKE '%Silva%';
+SELECT nome, salario FROM cliente ORDER BY nome;
+```
+
+---
+
+## 4. 🔗 JOINs (junções entre tabelas)
+
+### INNER JOIN
+```sql
+SELECT c.nomeCidade, e.nomeEstado
+FROM cidade c
+INNER JOIN estado e ON c.estadoID = e.id;
+```
+
+### LEFT JOIN
+- Traz tudo da esquerda, mesmo sem correspondência na direita.
+
+### RIGHT JOIN
+- Traz tudo da direita, mesmo sem correspondência na esquerda.
+
+### FULL JOIN (não suportado no MySQL)
+- Simulável com `UNION` de `LEFT` + `RIGHT` com `WHERE`.
+
+### CROSS JOIN
+- Produto cartesiano: combina todas as linhas entre duas tabelas.
+
+### SELF JOIN
+```sql
+SELECT f.nomeFunc, g.nomeFunc AS gerente
+FROM funcionario f
+JOIN funcionario g ON f.gerente = g.matricula;
+```
+
+### JOIN com várias tabelas
+```sql
+SELECT f.nomeFunc, c.nomeCidade, e.nomeEstado
+FROM funcionario f
+JOIN cidade c ON f.cidadeId = c.id
+JOIN estado e ON c.estadoID = e.id;
+```
+
+---
+
+## 5. 🧰 Comandos Adicionais
+
+### Alias (`AS`)
+- Para colunas:
+```sql
+SELECT nomeFunc AS 'Funcionário', salarioFunc * 1.1 AS 'Novo Salário'
+FROM funcionario;
+```
+- Para tabelas:
+```sql
+SELECT f.nomeFunc FROM funcionario f;
+```
+
+### LIMIT
+```sql
+SELECT * FROM tabela LIMIT 5;          -- Primeiras 5
+SELECT * FROM tabela LIMIT 3, 2;       -- Pula 3, mostra 2
+```
+
+### DISTINCT
+```sql
+SELECT DISTINCT nome FROM cliente;
+```
+- Remove duplicatas no resultado.
+
+### CASE
+```sql
+SELECT nomeFunc,
+CASE
+  WHEN sexoFunc = 'M' THEN 'Masculino'
+  WHEN sexoFunc = 'F' THEN 'Feminino'
+  ELSE 'Outro'
+END AS Genero
+FROM funcionario;
+```
+
+### UNION vs UNION ALL
+```sql
+-- UNION remove duplicadas
+SELECT nome FROM cliente
+UNION
+SELECT nomeFunc FROM funcionario;
+
+-- UNION ALL mantém todas
+SELECT nome FROM cliente
+UNION ALL
+SELECT nomeFunc FROM funcionario;
+```
+
+---
+
+## ✅ Boas Práticas
+
+- Evite `SELECT *` → impacta desempenho.
+- Use `WHERE` sempre em `DELETE` e `UPDATE`.
+- Evite `INSERT` com dezenas de linhas de uma vez.
+- Sempre teste subqueries antes de aplicá-las.
