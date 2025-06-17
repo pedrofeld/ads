@@ -498,3 +498,70 @@ SELECT nomeFunc FROM funcionario;
 - Use `WHERE` sempre em `DELETE` e `UPDATE`.
 - Evite `INSERT` com dezenas de linhas de uma vez.
 - Sempre teste subqueries antes de aplicá-las.
+
+---
+
+# Resumo - Banco de Dados (Aula 5)
+
+## TEMA 1: Subqueries (Subconsultas)
+- **Definição**: Consultas aninhadas dentro de outras (SELECT, INSERT, UPDATE, DELETE).
+- **Regras**:
+  - Sempre entre parênteses.
+  - Podem estar em `WHERE`, `HAVING`, `SELECT`, ou `FROM`.
+  - Execução: de dentro para fora.
+- **Operadores**:
+  - `=`, `>`, `<`, `>=`, `<=`: Para subconsultas que retornam **um único valor**.
+  - `IN` / `NOT IN`: Para múltiplos valores.
+  - `EXISTS` / `NOT EXISTS`: Verifica existência de resultados (retorna booleano).
+  - `ANY` / `ALL`: Comparação com qualquer/todos os resultados da subconsulta.
+- **Subquery Correlacionada**: Referencia uma tabela da consulta externa (usa alias).
+- **Alternativas**: `JOIN` geralmente tem melhor desempenho.
+
+---
+
+## TEMA 2: Formatação de Dados Textuais
+- **Funções**:
+  - `LENGTH()`: Retorna tamanho da string.
+  - `UPPER()` / `LOWER()`: Converte para maiúsculas/minúsculas.
+  - `TRIM()` / `LTRIM()` / `RTRIM()`: Remove espaços em branco.
+  - `SUBSTRING(expr, inicio, tamanho)`: Extrai parte da string.
+  - `REPLACE(expr, busca, substituição)`: Substitui texto.
+  - `CAST(value AS tipo)`: Conversão de tipos (ex: `CAST('100' AS INT)`).
+
+---
+
+## TEMA 3: Formatação de Dados Numéricos e Temporais
+- **Numéricos**:
+  - `ROUND(valor, casas)`: Arredonda.
+  - `TRUNCATE(valor, casas)`: Corta casas decimais sem arredondar.
+  - `MOD(dividendo, divisor)`: Resto da divisão.
+  - `DIV`: Parte inteira da divisão.
+- **Temporais**:
+  - `CURDATE()`, `CURTIME()`, `NOW()`: Data/hora atual.
+  - `DATEDIFF(data1, data2)`: Diferença em dias.
+  - `DATE_FORMAT(data, formato)`: Formata data (ex: `%d/%m/%Y`).
+  - `ADDDATE(data, INTERVAL valor unidade)`: Adiciona tempo (ex: `INTERVAL 1 DAY`).
+
+---
+
+## TEMA 4: Agregação de Dados
+- **Funções**:
+  - `COUNT()`: Conta registros (ignora `NULL` se coluna especificada).
+  - `SUM()`: Soma valores.
+  - `MIN()` / `MAX()`: Menor/maior valor.
+  - `AVG()`: Média.
+- **Cláusulas**:
+  - `GROUP BY`: Agrupa resultados por coluna.
+  - `HAVING`: Filtra grupos (pós-agregação). Ex: `HAVING COUNT(*) > 2`.
+- **Observação**: Colunas no `SELECT` com funções de agregação devem estar no `GROUP BY`.
+
+---
+
+## TEMA 5: Integridade e Segurança de Dados
+- **Segurança Lógica**:
+  - Controle de acesso com `GRANT` (concede permissões) e `REVOKE` (remove).
+  - Níveis de privilégio: Global, Banco, Tabela, Coluna.
+  - Comandos: `CREATE USER`, `DROP USER`, `FLUSH PRIVILEGES`.
+- **Integridade**:
+  - **Declarativa**: Restrições (`PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `CHECK`).
+  - **Procedural**: `TRIGGERS`, `STORED PROCEDURES`, funções personalizadas.
