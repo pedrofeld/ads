@@ -565,3 +565,112 @@ SELECT nomeFunc FROM funcionario;
 - **Integridade**:
   - **Declarativa**: Restrições (`PRIMARY KEY`, `FOREIGN KEY`, `NOT NULL`, `CHECK`).
   - **Procedural**: `TRIGGERS`, `STORED PROCEDURES`, funções personalizadas.
+
+---
+
+# 📘 Resumo Aula 6 – Banco de Dados
+
+## TEMA 1 – Índices e Views
+
+### Índices
+- **Melhoram desempenho de consultas**, evitando leitura total da tabela (full scan).
+- SQL cria automaticamente índices em PK (chave primária) e FK (chave estrangeira).
+- **Tipos**:
+  - *Clustered*: organiza fisicamente os dados pela coluna indexada (ex: PK).
+  - *Non-clustered*: mantém ponteiros, não reorganiza fisicamente (ex: FK).
+- **Quando usar**:
+  - Tabelas com muitos dados.
+  - Colunas com ampla variação e filtros frequentes (where, join, order by).
+- **Comandos**:
+  - Criar na tabela: `index(nomeColuna)`
+  - Criar depois: `create index nome on tabela(coluna);`
+  - Ver índices: `show index from tabela;`
+
+### Views (Tabelas Virtuais)
+- **Objetivo**: facilitar acesso a dados, segurança, isolamento da estrutura.
+- **Permite**: usar joins, where, funções, e até insert/update/delete.
+- **Sintaxe**:
+  ```sql
+  create view nomeView as select ...;
+  ```
+- **Gerenciamento**:
+  - Excluir: `drop view nome;`
+  - Ver: `show full tables where table_type like 'view';`
+
+---
+
+## TEMA 2 – Transações
+
+- **Agrupamento de operações** executadas como bloco único.
+- **Comandos**:
+  - `start transaction`
+  - `commit` – Confirma.
+  - `rollback` – Cancela.
+  - `set autocommit = 0;` – Torna transações explícitas.
+- **Propriedades ACID**:
+  - Atomicidade, Consistência, Isolamento, Durabilidade.
+- **Concorrência** e problemas:
+  - Dirty read, nonrepeatable read, phantom read, lost update.
+- **Níveis de Isolamento**:
+  - `read uncommitted`, `read committed`, `repeatable read`, `serializable`.
+
+---
+
+## TEMA 3 – Triggers
+
+- **Ações automáticas** executadas após/before um insert, update ou delete.
+- **Só existem triggers em nível de linha no MySQL**.
+- **Sintaxe**:
+  ```sql
+  create trigger nome before|after insert|update|delete on tabela
+  for each row begin ... end;
+  ```
+- **Referências**:
+  - `new`: valores novos (insert/update).
+  - `old`: valores antigos (update/delete).
+- **Ver triggers**: `show triggers from banco;`
+- **Excluir**: `drop trigger nome;`
+
+---
+
+## TEMA 4 – Stored Procedures
+
+- **Blocos de comandos reutilizáveis** com ou sem parâmetros.
+- **Parâmetros**:
+  - `in` (entrada), `out` (saída), `inout` (entrada + saída).
+- **Sintaxe**:
+  ```sql
+  create procedure nome(IN param tipo, OUT param tipo) begin ... end;
+  ```
+- **Controle de fluxo**:
+  - `if`, `case`, `loop`, `while`, `repeat`.
+
+---
+
+## TEMA 5 – Funções
+
+- **Semelhante à procedure**, mas **sempre retorna um valor**.
+- **Tipos**:
+  - Escalar (1 valor), Composta (vários).
+- **Sintaxe**:
+  ```sql
+  create function nome(param tipo) returns tipo
+  deterministic
+  begin ... return valor; end;
+  ```
+
+---
+
+## TEMA 6 – Cursores
+
+- **Permitem leitura linha a linha de um SELECT**.
+- **Usados em procedures** para tratar registros individualmente.
+- **Etapas**:
+  1. `declare cursor cursor for select ...;`
+  2. `open cursor;`
+  3. `fetch cursor into variáveis;`
+  4. `close cursor;`
+- **Tratamento de fim**:
+  ```sql
+  declare continue handler for not found set variavel = true;
+  ```
