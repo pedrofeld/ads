@@ -275,3 +275,89 @@ Regras:
  11000
   
 Resultado: *11000 (binário) = 24 (decimal)*
+
+# Matemática Aplicada à Computação (Aula 3)
+
+Notação científica, aritmética de ponto flutuante, erros e medidas de erro.
+
+---
+
+## Tema 1: Norma IEEE 754
+- Padrão para representação de números em ponto flutuante em computadores
+- Objetivo: Resolver problemas de precisão numérica, arredondamento e operações aritméticas
+- Três níveis de precisão:
+  - **Simples**: 32 bits (1 sinal, 8 expoente, 23 mantissa) - 7 casas decimais
+  - **Dupla**: 64 bits (1 sinal, 11 expoente, 52 mantissa) - 16 casas decimais  
+  - **Estendida**: 80 bits (1 sinal, 15 expoente, 64 mantissa) - 20 casas decimais
+
+## Tema 2: Representação de Números Reais
+- Notação científica: `x = ± M × bⁿ` (M = mantissa/coeficiente, b = base, n = expoente)
+- **Notação científica normalizada**: único dígito antes da vírgula (1 ≤ M < 10)
+- Exemplos no Python com formatação `%.Xe` // X é o número de casas decimais
+- Limitações computacionais: números irracionais como √3 são aproximados
+
+## Tema 3: Aritmética de Ponto Flutuante
+### Operações Básicas:
+- **Soma/Subtração**: Alinhar expoentes, operar mantissas, normalizar
+- **Multiplicação**: Multiplicar mantissas, somar expoentes, normalizar  
+- **Divisão**: Dividir mantissas, subtrair expoentes, normalizar
+
+## Tema 4: Representação de Erros
+### Tipos de Erros:
+- **Arredondamento**: aproximações numéricas
+- **Truncamento**: séries infinitas interrompidas (ex: cálculo de seno)
+- **Overflow/Underflow**: números muito grandes/pequenos
+- **NaN**: operações inválidas (ex: 0/0, √-1)
+
+### Medidas de Erro:
+- **Erro Absoluto**: `EA = |x - x̄|`
+- **Erro Relativo**: `ER = |x - x̄|/|x|` (pode ser em porcentagem)
+- Exemplos calculados com Python usando `abs()`
+
+## Tema 5: Tratamento de Erros
+- Uso de `try/except` no Python para evitar interrupções
+- Mensagens personalizadas para erros comuns (divisão por zero, etc.)
+- Importância de identificar e tratar erros sem mascarar problemas de lógica
+
+## APLICAÇÃO PRÁTICA: Cálculo da Área do Círculo
+
+### Contexto da Atividade:
+Calcular a área de um círculo (A = πr²) com:
+- π = 3,14 (aproximação comum)
+- π = 3,14159265 (valor mais preciso)
+
+### Objetivo dos Cálculos de Erro:
+
+#### 🔍 Erro Absoluto (EA)
+- **O que mostra**: A diferença numérica real entre os dois resultados
+- **Pergunta que responde**: "Quantos cm² eu 'erro' ao usar π = 3,14 em vez de π mais preciso?"
+- **Fórmula**: `EA = |Área_precisa - Área_aproximada|`
+- **Interpretação**: Mostra o impacto real na unidade de medida
+
+#### 📊 Erro Relativo (ER)
+- **O que mostra**: A significância do erro em relação ao valor real
+- **Pergunta que responde**: "Meu erro é grande ou pequeno em termos percentuais?"
+- **Fórmula**: `ER = |Área_precisa - Área_aproximada| / |Área_precisa|`
+- **Interpretação**: Mostra se a aproximação é "boa o suficiente"
+
+### Por que isso é importante?
+1. **Tomada de decisão**: Saber se a aproximação com π = 3,14 é aceitável
+2. **Otimização computacional**: Usar menos precisão quando o erro é insignificante
+3. **Consciência numérica**: Entender o impacto das aproximações nos resultados
+
+### Analogia Financeira:
+- **Erro absoluto**: "Errei R$ 10,00"
+- **Erro relativo**: "Errei 1% do total" (se tiver R$ 1000,00) vs "Errei 100%" (se tiver R$ 10,00)
+
+## Conceitos Importantes:
+- **Épsilon da máquina**: menor número representável maior que 1
+- **Precisão da máquina**: número de dígitos significativos
+- **Mal condicionamento**: operações com números muito próximos
+
+## Ferramentas Python:
+- `sys.float_info.min/max/epsilon` - limites do sistema
+- Formatação científica: `print('%.Xe' % valor)`
+- Cálculo de séries: `for`, `range()`, `factorial()`
+- Tratamento de erros: `try/except`
+
+> A norma IEEE 754 e as técnicas apresentadas são fundamentais para computação científica, garantindo consistência e confiabilidade nos cálculos numéricos. O estudo dos erros nos ajuda a fazer escolhas inteligentes entre precisão e eficiência computacional.
