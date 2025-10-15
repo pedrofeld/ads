@@ -194,7 +194,7 @@ Qual foi a duração média de cada episódio?
 
 print("Atividade 1:")
 import pandas as pd
-episodios={'Eposódios': [35, 34, 26, 32, 37, 28, 27, 33, 36, 32]}
+episodios={'Episódios': [35, 34, 26, 32, 37, 28, 27, 33, 36, 32]}
 p = pd.DataFrame(episodios)
 media = p['Episódios'].mean()
 print(media)
@@ -219,45 +219,25 @@ mediana = p['Episódios'].median()
 print(mediana)
 
 """
-4. N/A
-"""
-
-"""
-5. Uma série de TV teve 10 episódios com as seguintes durações, em minutos:
-35, 34, 26, 32, 37, 28, 27, 33, 36, 32.
-Por se tratar de um conjunto com poucos dados, calcule a variância amostral e o
-desvio padrão amostral.
-"""
-
-print("Atividade 5:")
-# CONTINUA
-
-"""
-6. Uma série de TV teve 10 episódios com as seguintes durações, em minutos:
+4. Uma série de TV teve 10 episódios com as seguintes durações, em minutos:
 35, 34, 26, 32, 37, 28, 27, 33, 36, 32.
 Obtenha o desvio padrão por meio do Python.
 """
 
-"""
-7. Em uma caixa de ferramentas, há 4 chaves de fenda e 3 chaves philips. Qual é a
-probabilidade de que uma pessoa, sem olhar para as ferramentas, pegue uma
-chave de fenda?
-"""
+print("Atividade 4:")
+duracao={'Duração':[35, 34, 26, 32, 37, 28, 27, 33, 36, 32]}
+d=pd.DataFrame(duracao)
+desviopadrao=d['Duração'].std()
+print(f'Desvio padrão: {desviopadrao}')
 
 """
-8. O tempo médio para a chegada de uma ambulância no local onde precisa prestar
-atendimento tem média de 15 minutos após o chamado com desvio padrão de 3
-minutos. Sabendo que os tempos estão de acordo com uma distribuição normal,
-qual é a probabilidade de que uma ambulância chegue entre 10 e 15 minutos?
-"""
-
-"""
-9. Utilizando a fórmula de Slovin, qual é o tamanho da amostra referente a uma
-população de 200.000 dados considerando uma margem de erro de 4%?
-"""
-
-"""
-10. Utilizando a fórmula de Slovin e o Python, qual é o tamanho da amostra
+5. Utilizando a fórmula de Slovin e o Python, qual é o tamanho da amostra
 referente a uma população de 200.000 dados considerando uma margem de erro de
 4%?
 """
+print("Atividade 5:")
+from math import ceil
+N=200000
+e=0.04
+ne=ceil(N/(1+N*e**2))
+print(f'Tamanho da amostra: {ne}')
