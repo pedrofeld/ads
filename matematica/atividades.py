@@ -241,3 +241,67 @@ N=200000
 e=0.04
 ne=ceil(N/(1+N*e**2))
 print(f'Tamanho da amostra: {ne}')
+
+print("-----Aula prática 06----")
+
+"""
+1. Um dos primeiros algoritmos destinados à criptografia de mensagens foi a Cifra
+de César. É um algoritmo simples baseado na substituição de letras por outras a
+partir de uma troca de posições. Utilizando uma troca pela letra que está quatro
+posições à frente, temos que a letra “a” é substituída pela letra “e”, a letra “b” é
+substituída pela letra “f” e assim por diante. Considerando a mensagem “MAIS
+AMOR”, por meio do Python, qual é a respectiva forma criptografada utilizando a
+Cifra de César com a substituição descrita acima?
+"""
+
+print("Atividade 1:")
+from string import ascii_uppercase
+a=list(ascii_uppercase)
+mensagem=input('Digite a mensagem: ')
+mensagem=mensagem.upper()
+mc=""
+for l in mensagem:
+    i=ord(l)-65
+    if l in a:
+        mc+=a[(i+3)%26]
+    else:
+        l
+print(f'Mensagem criptografada: {mc}')
+
+"""
+2. Um dos primeiros algoritmos destinados à criptografia de mensagens foi a Cifra
+de César. É um algoritmo simples baseado na substituição de letras por outras a
+partir de uma troca de posições. Utilizando uma troca pela letra que está quatro
+posições à frente, temos que a letra “a” é substituída pela letra “e”, a letra “b” é
+substituída pela letra “f” e assim por diante. Considerando a mensagem
+criptografada “IRXIRHMQIRXS”, qual é a mensagem original utilizando a Cifra de
+César com a substituição descrita acima?
+"""
+
+print("Atividade 2:")
+from string import ascii_uppercase
+a=list(ascii_uppercase)
+mensagem=input('Digite a mensagem: ')
+mensagem=mensagem.upper()
+mc=""
+for l in mensagem:
+    i=ord(l)-65
+    if l in a:
+        mc+=a[(i-3)%26]
+    else:
+        l
+print(f'Mensagem criptografada: {mc}')
+
+"""
+3. Na criptografia RSA (Rivest-Shamir-Adleman), as letras são substituídas por
+números de dois dígitos. O Python possui uma biblioteca destinada à criptografia
+RSA. Considerando a palavra “mensagem”, qual é a respectiva forma criptografada?
+"""
+
+print("Atividade 3:")
+import rsa
+chavepublica,chaveprivada=rsa.newkeys(512)
+mensagemrsa=input('Digite a mensagem: ')
+mensagemrsacripto=rsa.encrypt(mensagemrsa.encode(),chavepublica)
+print("Mensagem original:", mensagemrsa)
+print("Mensagem criptografada:", mensagemrsacripto)
