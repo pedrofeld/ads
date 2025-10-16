@@ -361,3 +361,180 @@ Calcular a área de um círculo (A = πr²) com:
 - Tratamento de erros: `try/except`
 
 > A norma IEEE 754 e as técnicas apresentadas são fundamentais para computação científica, garantindo consistência e confiabilidade nos cálculos numéricos. O estudo dos erros nos ajuda a fazer escolhas inteligentes entre precisão e eficiência computacional.
+
+---
+
+# Matemática Aplicada à Computação (Aula 6)
+
+## Criptografia
+
+A **criptografia** é o processo de codificar informações para garantir
+que apenas o emissor e o receptor possam compreendê-las. Ela protege
+dados contra acessos não autorizados e é amplamente usada em
+comunicações digitais, como mensagens e pagamentos online.
+
+### Tipos de Sistemas Criptográficos
+
+Existem **dois principais tipos de criptografia**: - **Simétrica:** usa
+a **mesma chave** para cifrar e decifrar uma mensagem. -
+**Assimétrica:** usa **duas chaves diferentes**, uma pública (para
+cifrar) e uma privada (para decifrar).
+
+Também estudamos **assinaturas digitais** e **certificados digitais**,
+que são aplicações práticas da criptografia para garantir autenticidade
+e segurança.
+
+------------------------------------------------------------------------
+
+## 1. Algoritmos Criptográficos
+
+Um **algoritmo criptográfico** transforma um **texto plano** (mensagem
+original) em **texto cifrado** (mensagem codificada).
+
+### Exemplos Históricos
+
+-   **Tumba de Khnumhotep II:** primeiros registros de uso de símbolos
+    secretos.
+-   **Cifra de César:** substitui cada letra por outra três posições à
+    frente no alfabeto.
+-   **Máquina Enigma:** usada na Segunda Guerra Mundial para
+    comunicações militares alemãs.
+
+Exemplo da **Cifra de César**:
+
+    Texto original: ESTUDO PYTHON
+    Texto cifrado: HVWXGR SBWKRQ
+
+No Python, isso pode ser implementado com manipulação de caracteres
+ASCII e o uso do operador módulo para circular o alfabeto (A→D, B→E,
+..., X→A).
+
+------------------------------------------------------------------------
+
+## 2. Chaves Simétricas
+
+A **criptografia simétrica** usa **a mesma chave** para cifrar e
+decifrar.\
+Se a chave for descoberta, todo o sistema é comprometido.
+
+### Exemplos de algoritmos simétricos
+
+-   **DES (Data Encryption Standard)** e **3DES**
+-   **AES (Advanced Encryption Standard)**
+-   **Blowfish**, **Twofish**, **IDEA**, **RC4**, **RC5**
+
+### Tipos de Cifras Simétricas
+
+-   **Cifra de Substituição:** troca símbolos por outros. Exemplo: Cifra
+    de César.
+-   **Cifra de Transposição:** altera a **ordem das letras** de acordo
+    com uma chave.
+
+#### Cifra de Vigenère
+
+Utiliza **vários alfabetos cifrados** (um para cada letra), sendo mais
+difícil de quebrar. É chamada de **cifra polialfabética**.
+
+#### Cifra de Transposição (exemplo)
+
+A mensagem é reorganizada conforme uma chave numérica, mudando a posição
+das letras. Por exemplo, com a chave 123456789 = 892147356, o texto
+"ESTUDO PYTHON" é cifrado como "PYSEU TDO HTN O".
+
+#### Criptografia Moderna
+
+Os computadores operam com **bits**, então as cifras modernas atuam
+**bit a bit**, como: - **XOR (OU exclusivo)** --- combina bits do texto
+com os da chave. - **DES e AES** --- criptografam blocos de bits (por
+exemplo, AES usa blocos de 128 bits).
+
+------------------------------------------------------------------------
+
+## 3. Chaves Assimétricas
+
+Na **criptografia assimétrica**, há **duas chaves**: - **Chave
+pública:** usada para cifrar. - **Chave privada:** usada para decifrar.
+
+Mesmo conhecendo a chave pública, **não é possível descobrir a
+privada**.
+
+### Criptografia RSA (Rivest--Shamir--Adleman)
+
+1.  Escolhem-se dois números primos `p` e `q`.
+2.  Calcula-se `n = p × q` e a **função de Euler** ϕ(n) = (p--1)(q--1).
+3.  Escolhe-se `e` (número que não tenha divisores comuns com ϕ(n)) →
+    chave pública `(e, n)`.
+4.  Calcula-se `d` tal que `(e × d) ≡ 1 mod ϕ(n)` → chave privada
+    `(d, n)`.
+
+Para cifrar:
+
+    C ≡ Dᵉ mod n
+
+Para decifrar:
+
+    D ≡ Cᵈ mod n
+
+Em Python, isso pode ser feito com a biblioteca **rsa**:
+
+``` python
+import rsa
+chave_publica, chave_privada = rsa.newkeys(512)
+m = input("Mensagem: ")
+mc = rsa.encrypt(m.encode(), chave_publica)
+md = rsa.decrypt(mc, chave_privada).decode()
+```
+
+------------------------------------------------------------------------
+
+## 4. Assinatura Digital
+
+A **assinatura digital** serve para **comprovar a autoria e
+integridade** de um documento eletrônico.\
+Ela utiliza: - Uma **função hash**, que cria um resumo único dos
+dados. - Uma **chave privada**, que assina o hash. - Uma **chave
+pública**, que verifica a autenticidade.
+
+Se o conteúdo for alterado, o hash resultante será diferente e a
+assinatura se tornará inválida.
+
+### Implementação em Python (biblioteca `pycrypto`)
+
+``` python
+from Crypto.Hash import SHA256
+from Crypto.PublicKey import RSA
+from Crypto import Random
+
+# Geração das chaves
+semente = Random.new().read
+chaves = RSA.generate(1024, semente)
+publica = chaves.publickey()
+
+# Criação do hash e assinatura
+texto = "Estudo Java"
+hash1 = SHA256.new(texto.encode('utf-8')).digest()
+assinatura = chaves.sign(hash1, '')
+```
+
+A verificação compara o hash original com o hash recebido:\
+se ambos coincidirem, a assinatura é **válida e autêntica**.
+
+------------------------------------------------------------------------
+
+## 5. Certificados Digitais
+
+Um **certificado digital** é uma "carteira de identidade eletrônica" que
+autentica pessoas, empresas ou sistemas.
+
+Baseia-se no padrão **X.509** e é emitido por uma **Autoridade
+Certificadora (CA)**, que garante a validade das informações.
+
+### Classes de Certificados
+
+-   **Classe 1:** apenas e-mail válido.
+-   **Classe 2:** e-mail + dados pessoais.
+-   **Classe 3:** requer verificação presencial.
+-   **Classe 4:** uso governamental e financeiro (alta segurança).
+
+A CA é responsável por: - Emitir certificados. - Armazenar e validar
+chaves públicas. - Revogar certificados comprometidos.
